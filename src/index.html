@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tines</title>
+    <link rel="stylesheet" href="styles/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" type="module" defer></script>
+  </head>
+  <body class="flex flex-col">
+    <header
+      class="font-inter fixed flex justify-between items-center w-full px-14 py-5 bg-inherit"
+    >
+      <div class="flex items-center gap-2">
+        <img src="assets/tines-logo.svg" width="28" alt="Tines logo" />
+        <h1 class="text-white font-semibold text-xl">tines</h1>
+      </div>
+      <nav
+        class="flex items-center justify-between bg-[#63519e] px-4 rounded-[2rem] gap-4"
+      >
+        <div
+          class="relative flex items-center text-white text-sm font-semibold"
+        >
+          <a href="#" class="nav--link">Platform</a>
+          <div class="relative group">
+            <a href="#" class="nav--link">
+              <span>Solutions</span>
+              <img
+                src="assets/chevron-down.svg"
+                alt="Chevron down icon"
+                width="9"
+              />
+            </a>
+            <!-- ?? Content for solutions link -->
+            <div
+              class="hidden bg-[#D6EDD9] border border-[#5ABE89] text-[#1F7A57] group-hover:flex absolute mt-2 w-[80rem] rounded-xl -translate-x-[24rem]"
+            >
+              <div
+                class="flex flex-col items-start p-6 border-r border-inherit basis-full"
+              >
+                <p class="uppercase text-sm tracking-wider font-semibold mb-8">
+                  Solutions
+                </p>
+                <div class="border-b border-inherit font-inter">
+                  <wc-navlink-content
+                    title="By product"
+                    description="Connect Tines to any of your favorite products. If it offers an API, Tines connects with it."
+                    image="assets/illustrations/Artificial Intelligence 2.png"
+                  ></wc-navlink-content>
+                </div>
+                <div class="font-inter my-5">
+                  <wc-navlink-content
+                    title="Professional services"
+                    description="Accelerate your time to value, and increase your lifetime value with Tines."
+                    image="assets/illustrations/STARTUP 2.png"
+                  ></wc-navlink-content>
+                </div>
+              </div>
+              <div class="flex flex-col p-6 border-r border-inherit basis-full">
+                <p class="uppercase text-sm tracking-wider font-semibold mb-8">
+                  By Team
+                </p>
+                <div class="font-inter flex flex-col gap-5">
+                  <wc-navlink-link
+                    links='[
+                      {"icon": "assets/shield.svg", "label": "Security"},
+                      {"icon": "assets/desktop.svg", "label": "IT Operations"},
+                      {"icon": "assets/square-stack.svg", "label": "Infrastructure"},
+                      {"icon": "assets/wrench-screwdriver.svg", "label": "Engineering"},
+                      {"icon": "assets/shopping-bag.svg", "label": "Product"}
+                    ]'
+                  ></wc-navlink-link>
+                  <img
+                    src="assets/illustrations/Business Deal 6.png"
+                    class="self-end"
+                    alt="An illustration of group of employees"
+                    width="120"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col p-6 basis-full">
+                <p class="uppercase text-sm tracking-wider font-semibold mb-8">
+                  Tines for
+                </p>
+                <div class="border-b border-[#5ABE89] font-inter">
+                  <wc-navlink-content
+                    title="Partners"
+                    description="Work smarter with Tines' trusted partners."
+                    image="assets/illustrations/Business Deal 6.png"
+                  ></wc-navlink-content>
+                </div>
+                <wc-navlink-link
+                  links='[
+                    {"icon": "assets/court.svg", "label": "Federal"},
+                    {"icon": "assets/building-office.svg", "label": "Enterprise"},
+                    {"icon": "assets/lock.svg", "label": "MSSPs"}
+                  ]'
+                ></wc-navlink-link>
+              </div>
+              <div
+                class="w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-[#D6EDD9] absolute -top-2 left-[26.05rem]"
+              ></div>
+            </div>
+          </div>
+          <div class="relative group">
+            <a href="#" class="nav--link">
+              <span>Resources</span>
+              <img
+                src="assets/chevron-down.svg"
+                alt="Chevron down icon"
+                width="9"
+              />
+            </a>
+            <!-- ?? Content for resources link -->
+            <div
+              class="hidden bg-[#FFE0CC] border border-[#FD975D] text-[#B74D1A] group-hover:flex absolute mt-2 w-[80rem] rounded-xl -translate-x-[28rem]"
+            >
+              <div class="border-r border-inherit p-8 w-1/2">
+                <p class="uppercase text-sm tracking-wider font-semibold mb-8">
+                  Blog
+                </p>
+                <div class="flex flex-col">
+                  <img
+                    class="self-stretch"
+                    src="assets/illustrations/Business Presentation 4.png"
+                    alt="Business presentation illustration"
+                    width="200"
+                  />
+                  <h1 class="font-noto-serif text-2xl">
+                    Unleash your innovation with You Did WHAT With Tines?! Fall
+                    2025
+                  </h1>
+                </div>
+                <div class="flex mt-5">
+                  <a
+                    href="#"
+                    class="flex items-center gap-2 text-base border-r border-inherit pr-4"
+                  >
+                    <span>Read article</span>
+                    <img
+                      src="assets/arrow-long-right.svg"
+                      alt="Arrow long right icon"
+                    />
+                  </a>
+                  <a href="#" class="flex items-center gap-2 text-base pl-4">
+                    <span>Tines blog</span>
+                    <img
+                      src="assets/arrow-long-right.svg"
+                      alt="Arrow long right icon"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="p-8 w-full flex flex-col">
+                <p class="uppercase text-sm tracking-wider font-semibold mb-8">
+                  Discover & Learn
+                </p>
+                <div class="flex h-full">
+                  <div
+                    class="border-r border-[#FD975D] flex flex-col justify-between w-1/2 pr-4 h-full"
+                  >
+                    <wc-navlink-resources-content
+                      class="flex flex-col gap-5"
+                      links='
+                      [
+                        {"icon": "assets/book.svg", "title": "Case studies", "text": "Discover how companies apply Tines to transform he way their teams operate."},
+                        {"icon": "assets/library.svg", "title": "Library", "text": "Get inspiration from hundreds of pre-built workflows."}
+                      ]
+                    '
+                    ></wc-navlink-resources-content>
+                    <div class="grid grid-cols-2 gap-2">
+                      <a href="#" class="text-base">Events</a>
+                      <a href="#" class="text-base">Bootcamps</a>
+                      <a href="#" class="text-base">Podcast</a>
+                      <a href="#" class="text-base flex gap-5">
+                        Docs
+                        <li>API Docs</li>
+                      </a>
+                      <a href="#" class="text-base">Webinars</a>
+                    </div>
+                  </div>
+                  <div class="w-1/2 pl-4">
+                    <wc-navlink-resources-content
+                      class="flex flex-col gap-5"
+                      links='
+                      [
+                        {"icon": "assets/academic-cap.svg", "title": "University", "text": "Learn how to build in Tines; from the basics to advanced building."},
+                        {"icon": "assets/bulb.svg", "title": "Tines Explained", "text": "Answers and advice from the team that built Tines."},
+                        {"icon": "assets/user.svg", "title": "Customer center", "text": "Links and resources to help customers get the most from Tines."}
+                      ]
+                    '
+                    ></wc-navlink-resources-content>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-[#FFE0CC] absolute -top-2 left-[30.50rem]"
+              ></div>
+            </div>
+          </div>
+          <div class="relative group">
+            <a href="#" class="nav--link">
+              <span>Company</span>
+              <img
+                src="assets/chevron-down.svg"
+                alt="Chevron down icon"
+                width="9"
+              />
+            </a>
+            <!-- ?? Content for company link -->
+            <div
+              class="hidden bg-[#FFDCE8] border border-[#F486B8] text-[#A54B7A] group-hover:flex absolute mt-2 w-[70rem] rounded-xl -translate-x-[35rem]"
+            >
+              <div class="border-r border-inherit p-8 w-fit">
+                <p class="uppercase text-sm tracking-wider font-semibold mb-8">
+                  Join the team
+                </p>
+                <div class="flex flex-col gap-2">
+                  <h1 class="font-noto-serif text-3xl">Careers</h1>
+                  <p class="text-base font-normal">
+                    Join a world-class team and make an impact.
+                  </p>
+                  <img
+                    class="self-end mt-4"
+                    src="assets/illustrations/Business Deal 3.png"
+                    alt="Business deal illustration"
+                    width="150"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col p-8 w-full">
+                <p class="uppercase text-sm tracking-wider font-semibold mb-8">
+                  Company
+                </p>
+                <div class="flex h-full">
+                  <div
+                    class="flex flex-col gap-2 border-r border-[#F486B8] pr-8"
+                  >
+                    <h1 class="font-noto-serif text-3xl">About</h1>
+                    <p class="text-base font-normal">
+                      We power the world's most important workflows.
+                    </p>
+                    <img
+                      class="self-end mt-4"
+                      src="assets/illustrations/Infrastructures Building.png"
+                      alt="Infrastructure building illustration"
+                      width="150"
+                    />
+                  </div>
+                  <div class="flex flex-col pl-8">
+                    <a
+                      href="#"
+                      class="flex justify-between border-b border-[#F486B8]"
+                    >
+                      <div class="flex flex-col gap-3">
+                        <h1 class="font-noto-serif text-3xl flex gap-2">
+                          Tines Store
+                          <span class="self-start mt-2">
+                            <img
+                              src="assets/arrow-up-right.svg"
+                              alt="Arrow up right icon"
+                            />
+                          </span>
+                        </h1>
+                        <p class="text-base font-normal">
+                          Useful, beautiful products from Tines and friends.
+                        </p>
+                      </div>
+                      <img
+                        class="self-end"
+                        src="assets/illustrations/Shop Generic.png"
+                        alt="Shop generic illustration"
+                        width="120"
+                      />
+                    </a>
+                    <wc-navlink-company-content
+                      class="flex flex-col"
+                      links='[
+                      {"icon": "assets/envelope.svg", "title": "Contact"},
+                      {"icon": "assets/globe.svg", "title": "Slack Community"},
+                      {"icon": "assets/newspaper.svg", "title": "Newsroom"}
+                    ]'
+                    ></wc-navlink-company-content>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-[#FFE0CC] absolute -top-2 left-[37.50rem]"
+              ></div>
+            </div>
+          </div>
+          <a href="#" class="nav--link lined--white">Pricing</a>
+        </div>
+        <div class="flex cursor-pointer">
+          <img src="assets/magnifying-glass.svg" width="15" alt="Search icon" />
+        </div>
+      </nav>
+      <div class="flex gap-2">
+        <button class="header--button bg-[#63519e]">Login</button>
+        <button class="header--button bg-[#63519e]">Sign up</button>
+        <button class="header--button bg-white text-[#8D75E6]">
+          Book a demo
+        </button>
+      </div>
+    </header>
+    <main class="bg-[#8D75E6] flex flex-col h-screen w-full">
+      <section></section>
+    </main>
+  </body>
+</html>

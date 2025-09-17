@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: Inter, sans-serif;
+  --font-noto-serif: Noto Serif, serif;
+  --breakpoint-xs: 360px;
+}
+
+@layer components {
+  .nav--link {
+    @apply flex items-center gap-2 p-3 hover:bg-[#8D75E620];
+  }
+
+  .header--button {
+    @apply py-2 px-4 text-sm text-white font-semibold cursor-pointer rounded-md;
+  }
+}
+
+.lined--white::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 14px;
+  background-color: #ccc;
+  right: -1px;
+}
