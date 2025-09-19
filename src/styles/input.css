@@ -7,12 +7,20 @@
 }
 
 @layer components {
-  .nav--link {
+  .horizontal__padding {
+    @apply xs:px-5 sm:px-8 lg:px-14;
+  }
+
+  .nav__link {
     @apply flex items-center gap-2 p-3 hover:bg-[#8D75E620];
   }
 
-  .header--button {
+  .header__button {
     @apply py-2 px-4 text-sm text-white font-semibold cursor-pointer rounded-md;
+  }
+
+  .sidebar__link {
+    @apply py-4 font-medium text-white border-b-2 border-[#ffffff20];
   }
 }
 
@@ -23,4 +31,52 @@
   height: 14px;
   background-color: #ccc;
   right: -1px;
+}
+
+#sidebar-content {
+  height: 100dvh;
+}
+details summary {
+  list-style: none;
+}
+
+details[open] summary img {
+  transform: rotate(180deg);
+  transition: transform 0.2s;
+}
+
+#slider-wrapper {
+  animation: 10s slide infinite linear;
+}
+
+#slider-container::before,
+#slider-container::after {
+  position: absolute;
+  content: "";
+  z-index: 10;
+  height: 100%;
+  width: 20%;
+}
+
+#slider-container::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #8d75e6);
+}
+
+#slider-container::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #8d75e6);
+}
+
+#slider-wrapper:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

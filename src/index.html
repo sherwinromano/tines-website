@@ -15,21 +15,21 @@
   </head>
   <body class="flex flex-col">
     <header
-      class="font-inter fixed flex justify-between items-center w-full px-14 py-5 bg-inherit"
+      class="horizontal__padding font-inter fixed flex justify-between items-center w-full py-5 bg-[#8D75E6] z-20"
     >
       <div class="flex items-center gap-2">
         <img src="assets/tines-logo.svg" width="28" alt="Tines logo" />
         <h1 class="text-white font-semibold text-xl">tines</h1>
       </div>
       <nav
-        class="flex items-center justify-between bg-[#63519e] px-4 rounded-[2rem] gap-4"
+        class="relative items-center justify-between bg-[#63519e] px-4 rounded-[2rem] gap-4 xs:hidden lg:flex"
       >
         <div
           class="relative flex items-center text-white text-sm font-semibold"
         >
-          <a href="#" class="nav--link">Platform</a>
+          <a href="#" class="nav__link">Platform</a>
           <div class="relative group">
-            <a href="#" class="nav--link">
+            <a href="#" class="nav__link">
               <span>Solutions</span>
               <img
                 src="assets/chevron-down.svg"
@@ -109,7 +109,7 @@
             </div>
           </div>
           <div class="relative group">
-            <a href="#" class="nav--link">
+            <a href="#" class="nav__link">
               <span>Resources</span>
               <img
                 src="assets/chevron-down.svg"
@@ -205,7 +205,7 @@
             </div>
           </div>
           <div class="relative group">
-            <a href="#" class="nav--link">
+            <a href="#" class="nav__link">
               <span>Company</span>
               <img
                 src="assets/chevron-down.svg"
@@ -295,22 +295,617 @@
               ></div>
             </div>
           </div>
-          <a href="#" class="nav--link lined--white">Pricing</a>
+          <a href="#" class="nav__link lined__white">Pricing</a>
         </div>
-        <div class="flex cursor-pointer">
-          <img src="assets/magnifying-glass.svg" width="15" alt="Search icon" />
+        <div class="flex">
+          <img
+            id="search-icon"
+            class="cursor-pointer"
+            src="assets/magnifying-glass.svg"
+            width="15"
+            alt="Search icon"
+          />
+          <div
+            id="search-content"
+            class="hidden bg-white absolute -bottom-60 w-full left-0 border border-gray-400 rounded-xl"
+          >
+            <div class="flex border-b border-gray-400">
+              <div class="flex gap-3 border-r border-gray-400 p-4 grow">
+                <img
+                  src="assets/magnifying-glass-black.svg"
+                  alt="Magnifiying glass icon"
+                  width="16"
+                />
+                <input
+                  class="outline-none basis-full"
+                  type="text"
+                  name="search"
+                  id="search"
+                  placeholder="Search"
+                />
+              </div>
+              <a href="#" class="flex items-center px-4 gap-2">
+                <span class="text-sm">Open in new tab</span>
+                <img
+                  src="assets/arrow-up-right-black.svg"
+                  alt="Arrow up right black"
+                  width="8"
+                />
+              </a>
+            </div>
+            <div class="grid place-items-center py-14">
+              <p class="text-base">Start typing to search</p>
+            </div>
+          </div>
         </div>
       </nav>
-      <div class="flex gap-2">
-        <button class="header--button bg-[#63519e]">Login</button>
-        <button class="header--button bg-[#63519e]">Sign up</button>
-        <button class="header--button bg-white text-[#8D75E6]">
+      <div class="flex xs:gap-8 lg:gap-2">
+        <button class="header__button bg-[#63519e] xs:hidden lg:block">
+          Login
+        </button>
+        <button class="header__button bg-[#63519e] xs:hidden lg:block">
+          Sign up
+        </button>
+        <button
+          class="header__button xs:px-0 lg:px-4 xs:bg-transparent lg:bg-white xs:text-white lg:text-[#8D75E6]"
+        >
           Book a demo
+        </button>
+        <!-- ?? Small screen btns -->
+        <button class="xs:flex lg:hidden">
+          <img
+            src="assets/magnifying-glass-white.svg"
+            alt="Magnifying glass icon"
+            width="16"
+          />
+        </button>
+        <button id="sidebar-menu" class="xs:flex lg:hidden">
+          <img
+            src="assets/sidebar-icons/bars.svg"
+            alt="Hamburger menu icon"
+            width="16"
+          />
         </button>
       </div>
     </header>
-    <main class="bg-[#8D75E6] flex flex-col h-screen w-full">
-      <section></section>
+    <main class="flex flex-col h-fit w-full">
+      <section
+        class="horizontal__padding bg-[#8D75E6] flex flex-col gap-8 pt-[84px]"
+      >
+        <div class="flex flex-col h-screen">
+          <div class="grid place-items-center h-full">
+            <div
+              class="flex flex-col items-center font-inter xs:px-5 sm:px-0 gap-8"
+            >
+              <div
+                class="flex items-center text-white border border-[#ebebeb] rounded-3xl p-1 gap-2 pr-2"
+              >
+                <span
+                  class="border border-[#ebebeb] rounded-3xl w-9 text-center xs:hidden sm:block"
+                  >IT</span
+                >
+                <p class="xs:text-sm sm:text-base text-center leading-tight">
+                  2025 Forrester study: How IT can unlock AI's full value
+                </p>
+                <img
+                  class="xs:hidden sm:block"
+                  src="assets/arrow-long-right-white.svg"
+                  alt="Arrow long right icon"
+                  width="17"
+                />
+              </div>
+              <h1
+                class="font-noto-serif leading-none xs:text-[2.30rem] md:text-[3.5rem] text-white text-center xs:w-full lg:w-[60%]"
+              >
+                For the workflows you can't compromise
+              </h1>
+              <h2
+                class="xs:text-base sm:text-xl text-white text-center xs:w-full sm:w-1/2"
+              >
+                Build and orchestrate intelligent workflows and agents, on the
+                platform security and IT teams love.
+              </h2>
+              <div class="flex gap-2 mt-8">
+                <button
+                  class="bg-white py-3 px-5 text-sm text-[#8D75E6] font-semibold rounded-lg cursor-pointer"
+                >
+                  Book a demo
+                </button>
+                <button
+                  class="border border-white py-3 px-5 text-sm text-white font-semibold rounded-lg cursor-pointer"
+                >
+                  Sign up free
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            id="slider-container"
+            class="horizontal__padding relative flex overflow-hidden"
+          >
+            <div id="slider-wrapper" class="flex items-center gap-14 py-8">
+              <img
+                src="assets/company-logo-slider/canva.png"
+                alt="Canva logo"
+                width="60"
+              />
+              <img
+                src="assets/company-logo-slider/coinbase.png"
+                alt="Coinbase logo"
+                width="90"
+              />
+              <img
+                src="assets/company-logo-slider/databricks.png"
+                alt="Databricks logo"
+                width="100"
+              />
+              <img
+                src="assets/company-logo-slider/elastic.png"
+                alt="Elastic logo"
+                width="90"
+              />
+              <img
+                src="assets/company-logo-slider/gitlab.png"
+                alt="Gitlab logo"
+                width="90"
+              />
+              <img
+                src="assets/company-logo-slider/intercom.png"
+                alt="Intercom logo"
+                width="90"
+              />
+              <img
+                src="assets/company-logo-slider/mars.png"
+                alt="Mars logo"
+                width="90"
+              />
+              <img
+                src="assets/company-logo-slider/mckesson.png"
+                alt="McKesson logo"
+                width="90"
+              />
+              <img
+                src="assets/company-logo-slider/oak-ridge.png"
+                alt="Oakridge logo"
+                width="90"
+              />
+              <img
+                src="assets/company-logo-slider/opentable.png"
+                alt="OpenTable logo"
+                width="90"
+              />
+              <img
+                src="assets/company-logo-slider/snowflake.png"
+                alt="Snowflake logo"
+                width="90"
+              />
+              <img
+                src="assets/company-logo-slider/reddit.png"
+                alt="Reddit logo"
+                width="90"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="py-14 grid xs:grid-cols-1 lg:grid-cols-2 grid-rows-2 gap-4">
+          <div
+            class="flex flex-col justify-between p-8 rounded-2xl border bg-[#D6EDD9] border-[#5ABE89] gap-4 row-span-2"
+          >
+            <h2 class="font-inter text-sm font-semibold">Forrester study</h2>
+            <div class="flex gap-5">
+              <div class="flex flex-col self-end">
+                <h2
+                  class="font-noto-serif font-bold mb-1 xs:text-[1.20rem] md:text-[1.80rem] lg:text-3xl"
+                >
+                  Unlocking AI's full value:
+                </h2>
+                <h1
+                  class="font-noto-serif xs:text-[1.50rem] md:text-[1.80rem] lg:text-3xl"
+                >
+                  How IT orchestrates secure, scalable innovation
+                </h1>
+                <a
+                  href="#"
+                  class="font-inter font-semibold text-sm flex items-center gap-2 mt-4"
+                  >Read the study <span>⟶</span></a
+                >
+              </div>
+              <img
+                class="xs:hidden md:block md:w-[12rem] lg:w-[18rem]"
+                src="assets/illustrations/Robot On Laptop Computer.png"
+                alt="Robot on laptop illustration"
+                width="150"
+              />
+            </div>
+          </div>
+          <div
+            class="flex justify-between items-center p-8 rounded-2xl border bg-[#FFDCE8] border-[#F486B8] gap-4"
+          >
+            <div class="flex flex-col">
+              <h1
+                class="font-noto-serif xs:text-[1.50rem] md:text-[1.80rem] lg:text-3xl"
+              >
+                Unlocking IT agility with automation
+              </h1>
+              <h2
+                class="font-noto-serif xs:text-base md:text-[1.15rem] lg:text-2xl"
+              >
+                Vol 1: Patch management
+              </h2>
+              <a
+                href="#"
+                class="font-inter font-semibold text-sm flex items-center gap-2 mt-4"
+                >Read guide <span>⟶</span></a
+              >
+            </div>
+            <img
+              class="xs:hidden md:block"
+              src="assets/illustrations/Coding A Website 1.png"
+              alt="Coding a website illustration"
+              width="150"
+            />
+          </div>
+          <div
+            class="flex justify-between items-center p-8 rounded-2xl border bg-[#FFE0CC] border-[#FD975D] gap-4"
+          >
+            <div class="flex flex-col">
+              <h2 class="font-inter font-semibold text-base">
+                CISO perspectives:
+              </h2>
+              <h1
+                class="font-noto-serif xs:text-[1.50rem] md:text-[1.80rem] lg:text-3xl"
+              >
+                Separating the reality of AI from the hype
+              </h1>
+
+              <a
+                href="#"
+                class="font-inter font-semibold text-sm flex items-center gap-2 mt-4"
+                >Read report <span>⟶</span></a
+              >
+            </div>
+            <img
+              class="xs:hidden md:block"
+              src="assets/illustrations/Modular Coding 5.png"
+              alt="Modular coding illustration"
+              width="150"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        class="horizontal__padding bg-[#D6EDD9] h-screen flex justify-between items-center"
+      >
+        <div class="flex flex-col items-start xs:w-full lg:w-1/2 gap-8">
+          <h1
+            class="font-noto-serif xs:text-[2rem] md:text-[2.50rem] lg:text-[2.85rem] leading-tight"
+          >
+            Increase your sales with the best <strong>returns</strong> and
+            <strong>exchanges experience</strong>
+          </h1>
+          <p
+            class="font-inter xs:text-base md:text-[1.15rem] lg:text-[1.25rem]"
+          >
+            Enhance customer loyalty with instant refunds and reduce your
+            returns with instant exchanges and store credit.
+          </p>
+          <button
+            class="font-inter font-semibold text-sm bg-white border border-[#5ABE89] py-3 px-8 rounded-3xl cursor-pointer"
+          >
+            Book a demo
+          </button>
+        </div>
+        <img
+          class="object-cover h-[20rem] w-[20rem] rounded-lg xs:hidden lg:block"
+          src="assets/placeholder-img/women-with-smartphone.jpeg"
+          alt="A women with smartphone image"
+          width="150"
+        />
+      </section>
+      <section
+        class="horizontal__padding bg-white h-screen flex justify-between items-center"
+      >
+        <div class="flex flex-col xs:w-full lg:w-1/2 gap-5">
+          <h2 class="font-inter font-semibold tracking-wide uppercase text-sm">
+            Automated Global Employment Platform
+          </h2>
+          <h1
+            class="font-noto-serif xs:text-[2rem] md:text-[2.50rem] lg:text-[2.85rem] leading-tight"
+          >
+            <strong>Hire</strong> talent in <strong>180+ countries</strong>
+          </h1>
+          <p class="font-inter text-base">
+            Hire, pay, reward, and manage talent compliantly without setting up
+            an entity. Access deep local intelligence to win talent and stay
+            competitive. Fill new roles fast and expand to new markets in days.
+          </p>
+          <div class="flex xs:flex-col sm:flex-row gap-3 mt-8 mb-4">
+            <button
+              class="text-white bg-[#252525] font-inter font-semibold text-sm py-3 px-8 rounded-lg"
+            >
+              Book a demo
+            </button>
+            <button
+              class="text-black font-inter font-semibold text-sm py-3 px-8 border border-[#252525] rounded-lg"
+            >
+              Sign Up for Free
+            </button>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-3 text-sm">
+              <span class="text-green-500">✓</span>
+              <p class="font-inter">
+                G2's Leader in global employment platforms
+              </p>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <span class="text-green-500">✓</span>
+              <p class="font-inter">90% customer satisfaction rate</p>
+            </div>
+          </div>
+        </div>
+        <div class="self-stretch my-24 w-[40%] xs:hidden lg:flex relative">
+          <img
+            class="w-full rounded-2xl object-cover"
+            src="assets/placeholder-img/women-with-laptop.jpeg"
+            alt="Woman with laptop image"
+            width="120"
+          />
+          <!-- ?? Image with text -->
+          <div
+            class="flex flex-col gap-5 font-inter absolute -right-[1rem] bottom-5 w-1/2"
+          >
+            <div class="bg-[#252525] p-3 rounded-md">
+              <p class="text-center text-white text-sm font-medium uppercase">
+                Calculate Employment Costs Instantly
+              </p>
+            </div>
+            <div class="bg-[#252525] p-3 rounded-md">
+              <p class="text-center text-white text-sm font-medium uppercase">
+                Draft Employment Agreements Automatically
+              </p>
+            </div>
+            <div class="bg-[#252525] p-3 rounded-md">
+              <p class="text-center text-white text-sm font-medium uppercase">
+                Activate Global Payroll And Benefits
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="horizontal__padding bg-white flex xs:flex-col lg:flex-row items-center justify-between xs:py-24 lg:py-36 gap-8"
+      >
+        <div
+          class="flex flex-col gap-4 xs:w-full lg:w-[40%] xs:order-1 sm:order-none"
+        >
+          <h1
+            class="font-inter font-normal xs:text-[2rem] md:text-[2.50rem] lg:text-[2.85rem] leading-tight"
+          >
+            Refund your customers in just <strong>6 seconds</strong>
+          </h1>
+          <p class="font-inter text-base">
+            Enhance customer loyalty and reduce pressure on CACs thanks to
+            instant refunds and exchanges.
+          </p>
+        </div>
+        <img
+          class="xs:w-full lg:w-[40%] lg:h-[30rem] object-cover rounded-lg self-stretch xs:block sm:hidden lg:block"
+          src="assets/placeholder-img/phone-and-card.jpeg"
+          alt="Phone with credit card image"
+          width="120"
+        />
+      </section>
+      <!-- ?? Sidebar element -->
+      <aside
+        id="sidebar-content"
+        class="fixed z-50 top-0 w-full hidden bg-[#8D75E6] mt-[76px] font-inter"
+      >
+        <div class="flex h-full overflow-hidden">
+          <div class="flex flex-col grow overflow-auto">
+            <a href="#" class="horizontal__padding sidebar__link">Platform</a>
+            <details class="horizontal__padding sidebar__link">
+              <summary
+                class="flex justify-between items-center cursor-pointer select-none"
+              >
+                <span>Solutions</span>
+                <img
+                  src="assets/sidebar-icons/chevron-down.svg"
+                  alt="Chevron down icon"
+                  width="10"
+                />
+              </summary>
+              <div class="flex flex-col mt-4 font-normal gap-4">
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/solutions-dropdown/shield.svg"
+                    alt="Shield icon"
+                    width="16"
+                  />
+                  Security
+                </a>
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/solutions-dropdown/monitor.svg"
+                    alt="Desktop monitor icon"
+                    width="16"
+                  />
+                  IT operations
+                </a>
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/solutions-dropdown/stack.svg"
+                    alt="Square stack icon"
+                    width="16"
+                  />
+                  Infrastructure
+                </a>
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/solutions-dropdown/screws-wrench.svg"
+                    alt="Screw and wrench icon"
+                    width="16"
+                  />
+                  Engineering
+                </a>
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/solutions-dropdown/shopping-bag.svg"
+                    alt="Shopping bag icon"
+                    width="16"
+                  />
+                  Product
+                </a>
+              </div>
+            </details>
+            <details class="horizontal__padding sidebar__link">
+              <summary
+                class="flex justify-between items-center cursor-pointer select-none"
+              >
+                <span>Resources</span>
+                <img
+                  src="assets/sidebar-icons/chevron-down.svg"
+                  alt="Chevron down icon"
+                  width="10"
+                />
+              </summary>
+              <div class="flex flex-col mt-4 font-normal gap-4">
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/resources-dropdown/book.svg"
+                    alt="Book icon"
+                    width="16"
+                  />
+                  Case studies
+                </a>
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/resources-dropdown/library.svg"
+                    alt="Library building icon"
+                    width="16"
+                  />
+                  Library
+                </a>
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/resources-dropdown/cap.svg"
+                    alt="Academic cap icon"
+                    width="16"
+                  />
+                  University
+                </a>
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/resources-dropdown/bulb.svg"
+                    alt="Bulb icon"
+                    width="16"
+                  />
+                  <span class="flex gap-2">
+                    Tines Explained
+                    <img
+                      src="assets/sidebar-icons/company-dropdown/arrow-up-right.svg"
+                      alt="Arrow up right icon"
+                      width="8"
+                      class="self-start mt-1"
+                    />
+                  </span>
+                </a>
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/resources-dropdown/user.svg"
+                    alt="User profile icon"
+                    width="16"
+                  />
+                  Customer center
+                </a>
+              </div>
+            </details>
+            <details class="horizontal__padding sidebar__link">
+              <summary
+                class="flex justify-between items-center cursor-pointer select-none"
+              >
+                <span>Company</span>
+                <img
+                  src="assets/sidebar-icons/chevron-down.svg"
+                  alt="Chevron down icon"
+                  width="10"
+                />
+              </summary>
+              <div class="flex flex-col mt-4 font-normal gap-4">
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/company-dropdown/rocket.svg"
+                    alt="Rocket icon"
+                    width="16"
+                  />
+                  Careers
+                </a>
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/company-dropdown/user.svg"
+                    alt="User profile icon"
+                    width="16"
+                  />
+                  About
+                </a>
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/company-dropdown/store.svg"
+                    alt="Store icon"
+                    width="16"
+                  />
+                  <span class="flex gap-2">
+                    Tines Store
+                    <img
+                      src="assets/sidebar-icons/company-dropdown/arrow-up-right.svg"
+                      alt="Arrow up right icon"
+                      width="8"
+                      class="self-start mt-1"
+                    />
+                  </span>
+                </a>
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/company-dropdown/envelope.svg"
+                    alt="Envelope icon"
+                    width="16"
+                  />
+                  Contact
+                </a>
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/company-dropdown/globe.svg"
+                    alt="Globe icon"
+                    width="16"
+                  />
+                  <span class="flex gap-2">
+                    Slack Community
+                    <img
+                      src="assets/sidebar-icons/company-dropdown/arrow-up-right.svg"
+                      alt="Arrow up right icon"
+                      width="8"
+                      class="self-start mt-1"
+                    />
+                  </span>
+                </a>
+                <a href="#" class="flex items-center gap-4 py-2">
+                  <img
+                    src="assets/sidebar-icons/company-dropdown/tv.svg"
+                    alt="Television icon"
+                    width="16"
+                  />
+                  Newsroom
+                </a>
+              </div>
+            </details>
+            <a href="#" class="horizontal__padding sidebar__link">Pricing</a>
+            <a href="#" class="horizontal__padding sidebar__link">Log in</a>
+            <a href="#" class="horizontal__padding sidebar__link border-b-0"
+              >Sign up</a
+            >
+          </div>
+        </div>
+      </aside>
     </main>
   </body>
 </html>
