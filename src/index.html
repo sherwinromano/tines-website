@@ -15,7 +15,7 @@
   </head>
   <body class="flex flex-col">
     <header
-      class="horizontal__padding font-inter fixed flex justify-between items-center w-full py-5 bg-[#8D75E6] z-20"
+      class="horizontal__padding font-inter fixed flex justify-between items-center w-full py-5 xs:bg-[#8D75E6] lg:bg-transparent z-20"
     >
       <div class="flex items-center gap-2">
         <img src="assets/tines-logo.svg" width="28" alt="Tines logo" />
@@ -307,7 +307,7 @@
           />
           <div
             id="search-content"
-            class="hidden bg-white absolute -bottom-60 w-full left-0 border border-gray-400 rounded-xl"
+            class="hidden bg-white absolute -bottom-80 w-full left-0 border border-gray-400 rounded-xl"
           >
             <div class="flex border-b border-gray-400">
               <div class="flex gap-3 border-r border-gray-400 p-4 grow">
@@ -368,7 +368,7 @@
         </button>
       </div>
     </header>
-    <main class="flex flex-col h-fit w-full">
+    <main class="flex flex-col h-fit w-full overflow-hidden">
       <section
         class="horizontal__padding bg-[#8D75E6] flex flex-col gap-8 pt-[84px]"
       >
@@ -570,6 +570,293 @@
               alt="Modular coding illustration"
               width="150"
             />
+          </div>
+        </div>
+        <div class="h-fit flex flex-col items-center gap-14">
+          <h1 class="font-noto-serif text-3xl text-white">
+            Loved by customers
+          </h1>
+          <div class="flex xs:flex-col sm:flex-row items-center gap-8">
+            <wc-testimonial-ratings
+              icon="assets/company-logo-slider/oak-ridge.png"
+              ratings="200+ reviews"
+            ></wc-testimonial-ratings>
+            <wc-testimonial-ratings
+              icon="assets/company-logo-slider/coinbase.png"
+            ></wc-testimonial-ratings>
+          </div>
+          <!-- ?? Testimonial slider -->
+          <div class="flex flex-col gap-4">
+            <!-- ?? Slide to left "to-left-marquee-wrapper class" -->
+            <div
+              class="flex justify-start max-w-screen overflow-auto scrollbar-hide"
+            >
+              <div class="to-left-marquee-wrapper flex gap-6 pr-6">
+                <wc-testimonial-child
+                  class="xs:min-w-[30rem] lg:min-w-[40rem]"
+                  description="An opportunity to bring automation into areas of the organization that just don't have developers."
+                  icon="assets/company-logo-slider/mars.png"
+                  image="assets/placeholder-img/developer-with-phone.jpeg"
+                  colors="bg-[#FFDCE8] border border-[#F486B8]"
+                  textColor="text-[#A54B7A]"
+                ></wc-testimonial-child>
+                <wc-testimonial-child
+                  class="xs:min-w-[30rem] lg:min-w-[40rem]"
+                  description="No matter how many tools you change, you can keep Tines in place."
+                  icon="assets/company-logo-slider/intercom.png"
+                  colors="bg-[#D6EDD9] border border-[#5ABE89]"
+                  textColor="text-[#1F7A57]"
+                ></wc-testimonial-child>
+              </div>
+              <div
+                aria-hidden="true"
+                class="to-left-marquee-wrapper xs:hidden lg:flex gap-6 pr-6"
+              >
+                <wc-testimonial-child
+                  class="min-w-[40rem]"
+                  description="An opportunity to bring automation into areas of the organization that just don't have developers."
+                  icon="assets/company-logo-slider/mars.png"
+                  image="assets/placeholder-img/developer-with-phone.jpeg"
+                  colors="bg-[#FFDCE8] border border-[#F486B8]"
+                  textColor="text-[#A54B7A]"
+                ></wc-testimonial-child>
+                <wc-testimonial-child
+                  class="min-w-[40rem]"
+                  description="No matter how many tools you change, you can keep Tines in place."
+                  icon="assets/company-logo-slider/intercom.png"
+                  colors="bg-[#D6EDD9] border border-[#5ABE89]"
+                  textColor="text-[#1F7A57]"
+                ></wc-testimonial-child>
+              </div>
+              <div class="to-left-marquee-wrapper xs:flex lg:hidden gap-6 pr-6">
+                <wc-testimonial-child
+                  class="xs:min-w-[30rem] lg:min-w-[40rem]"
+                  heading="30s"
+                  subheading="process time per request, reduced from 10-20 minutes"
+                  icon="assets/company-logo-slider/mars.png"
+                  colors="bg-[#FFDCE8] border border-[#F486B8]"
+                  textColor="text-[#A54B7A]"
+                ></wc-testimonial-child>
+                <wc-testimonial-child
+                  class="xs:min-w-[30rem] lg:min-w-[40rem]"
+                  description='Tines has given us the power to turn those "What ifs" into reality. The logical workflow makes it easy for beginners to immediately start building.'
+                  icon="assets/company-logo-slider/intercom.png"
+                  colors="bg-[#D6EDD9] border border-[#5ABE89]"
+                  textColor="text-[#1F7A57]"
+                ></wc-testimonial-child>
+              </div>
+            </div>
+            <!-- ?? Slide to right "to-right-marquee-wrapper class" -->
+            <div
+              class="xs:hidden lg:flex justify-end max-w-screen overflow-auto scrollbar-hide"
+            >
+              <div class="to-right-marquee-wrapper flex gap-6 pr-6">
+                <wc-testimonial-child
+                  class="min-w-[40rem] min-h-[20rem]"
+                  heading="30s"
+                  subheading="process time per request, reduced from 10-20 minutes"
+                  icon="assets/company-logo-slider/mars.png"
+                  colors="bg-[#FFDCE8] border border-[#F486B8]"
+                  textColor="text-[#A54B7A]"
+                ></wc-testimonial-child>
+                <wc-testimonial-child
+                  class="min-w-[40rem] min-h-[20rem]"
+                  description='Tines has given us the power to turn those "What ifs" into reality. The logical workflow makes it easy for beginners to immediately start building.'
+                  icon="assets/company-logo-slider/intercom.png"
+                  colors="bg-[#D6EDD9] border border-[#5ABE89]"
+                  textColor="text-[#1F7A57]"
+                ></wc-testimonial-child>
+              </div>
+              <div class="to-right-marquee-wrapper flex gap-6 pr-6">
+                <wc-testimonial-child
+                  class="min-w-[40rem] min-h-[20rem]"
+                  heading="30s"
+                  subheading="process time per request, reduced from 10-20 minutes"
+                  icon="assets/company-logo-slider/mars.png"
+                  colors="bg-[#FFDCE8] border border-[#F486B8]"
+                  textColor="text-[#A54B7A]"
+                ></wc-testimonial-child>
+                <wc-testimonial-child
+                  class="min-w-[40rem] min-h-[20rem]"
+                  description='Tines has given us the power to turn those "What ifs" into reality. The logical workflow makes it easy for beginners to immediately start building.'
+                  icon="assets/company-logo-slider/intercom.png"
+                  colors="bg-[#D6EDD9] border border-[#5ABE89]"
+                  textColor="text-[#1F7A57]"
+                ></wc-testimonial-child>
+              </div>
+            </div>
+          </div>
+          <button
+            class="py-3 px-5 border border-white text-white text-sm font-inter rounded-md"
+          >
+            See all case studies
+          </button>
+        </div>
+        <div class="h-fit flex flex-col items-center py-24">
+          <div class="grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <wc-grid-child
+              heading="Security teams"
+              subheading="Merf for"
+              image="assets/illustrations/Robot On Laptop Computer.png"
+            ></wc-grid-child>
+            <wc-grid-child
+              heading="IT Operations"
+              subheading="Merf for"
+              image="assets/illustrations/Coding A Website 1.png"
+            ></wc-grid-child>
+            <wc-grid-child
+              heading="Connect anything"
+              subheading="Integrations:"
+              description="If it offers an API, Tines connects with it. From mainstream solutions to niche and internal tools, Tines is an integrator across your entire stack."
+              image="assets/illustrations/Business Deal 3.png"
+            ></wc-grid-child>
+          </div>
+          <div class="flex xs:flex-col sm:flex-row items-center gap-8 mt-14">
+            <span class="font-inter text-base text-white"
+              >Explore Merf for</span
+            >
+            <div
+              class="flex xs:flex-col sm:flex-row xs:items-start sm:items-center gap-3"
+            >
+              <wc-merf-features
+                icon="assets/sidebar-icons/solutions-dropdown/stack.svg"
+                title="Infrastructure"
+              ></wc-merf-features>
+              <wc-merf-features
+                icon="assets/sidebar-icons/solutions-dropdown/screws-wrench.svg"
+                title="Engineering"
+              ></wc-merf-features>
+              <wc-merf-features
+                icon="assets/sidebar-icons/solutions-dropdown/shopping-bag.svg"
+                title="Product"
+              ></wc-merf-features>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="horizontal__padding h-fit flex xs:flex-col lg:flex-row justify-between bg-white py-24 gap-24"
+      >
+        <div
+          class="xs:static lg:sticky top-24 flex flex-col gap-7 xs:w-full sm:w-1/2 lg:w-[30%] self-start"
+        >
+          <h1 class="font-noto-serif text-3xl">What's new</h1>
+          <p class="font-inter text-base">
+            Real product velocity. See what we've shipped this week, and every
+            week.
+          </p>
+          <div class="flex gap-2">
+            <button
+              class="font-inter font-semibold py-3 px-5 rounded-md bg-[#202020] text-white text-sm cursor-pointer"
+            >
+              See all updates
+            </button>
+            <button
+              class="font-inter font-semibold py-3 px-5 rounded-md border border-[#202020] cursor-pointer"
+            >
+              RSS feed
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col xs:w-full lg:w-[50%]">
+          <div class="flex flex-col gap-4">
+            <wc-product-update-list
+              image="assets/illustrations/STARTUP 2.png"
+              title="Bulk export selected cases"
+              about="Cases"
+              date="September 11, 2025"
+            ></wc-product-update-list>
+            <wc-product-update-list
+              image="assets/illustrations/Robot on Laptop Computer.png"
+              title="Clearer Storyboard views for story runs"
+              about="Storyboard"
+              date="September 10, 2025"
+            ></wc-product-update-list>
+            <wc-product-update-list
+              image="assets/illustrations/Business Deal 3.png"
+              title="Cases improvements"
+              about="Cases"
+              date="September 10, 2025"
+            ></wc-product-update-list>
+            <wc-product-update-list
+              image="assets/illustrations/Robot on Laptop Computer.png"
+              title="Paste actions that can be tools onto the AI Agent action"
+              about="All in Tines"
+              date="September 9, 2025"
+            ></wc-product-update-list>
+            <wc-product-update-list
+              image="assets/illustrations/Business Presentation 4.png"
+              title="Records and Dashboard improvements"
+              about="Records and dashboard"
+              date="September 9, 2025"
+            ></wc-product-update-list>
+          </div>
+          <button
+            class="font-inter font-semibold py-5 text-sm border border-[#ccc] mt-8 rounded-md cursor-pointer"
+          >
+            View all product updates
+          </button>
+        </div>
+      </section>
+      <section class="horizontal__padding bg-white h-fit flex py-24">
+        <div class="flex flex-col gap-4 xs:w-full lg:w-fit h-fit">
+          <div class="flex items-center justify-between">
+            <h1 class="font-noto-serif text-3xl">Smart, secure workflows</h1>
+            <img
+              class="w-[7rem]"
+              src="assets/illustrations/Robot On Laptop Computer.png"
+              alt="Robot on laptop illustration"
+              width="500"
+            />
+          </div>
+          <div class="flex justify-center flex-wrap gap-4">
+            <wc-tab-section
+              title="Automate"
+              content-image="assets/placeholder-img/automation-guy.jpeg"
+              content-heading="Automate"
+              content-subheading="Automate the toil with SOAR that actually works for your team"
+              content-description="Build classic capabilities like endpoint detection & response and phishing response, solve needs like employee onboarding and chatbots, and automate complex workflows unique to your business — all in the same tool."
+              content-icon="assets/illustrations/Modular Coding 5.png"
+              bg-color="bg-[#FFE0CC]"
+              border-color="border-[#FD975D]"
+              text-color="#B74D1A"
+            ></wc-tab-section>
+            <wc-tab-section
+              title="Enrich"
+              content-image="assets/placeholder-img/javascript-code.jpeg"
+              content-heading="Enrich"
+              content-subheading="Enrich your alerts with data from across your tech stack"
+              content-description="Tines is integrated, not bound by integrations. This unlocks deeper data and insight sharing across tools, regardless of whether they are internal or external."
+              content-icon="assets/illustrations/Coding A Website 1.png"
+              bg-color="bg-[#D6EDD9]"
+              border-color="border-[#5ABE89]"
+              text-color="#1F7A57"
+            ></wc-tab-section>
+            <wc-tab-section
+              title="Triage"
+              content-image="assets/placeholder-img/code-review.jpeg"
+              content-heading="Triage"
+              content-subheading="Triage through automation-first case management"
+              content-description="We believe better automation means fewer cases and faster incident response. This empowers your team to collaborate on the highest impact work while your workflows manage the rest."
+              content-icon="assets/illustrations/Business Presentation 4.png"
+              bg-color="bg-[#FFDCE8]"
+              border-color="border-[#F486B8]"
+              text-color="#A54B7A"
+            ></wc-tab-section>
+            <wc-tab-section
+              title="Report"
+              content-heading="Report"
+              bg-color="bg-[#FFE0CC]"
+              border-color="border-[#FD975D]"
+              text-color="#B74D1A"
+            ></wc-tab-section>
+            <wc-tab-section
+              title="Collaborate"
+              content-heading="Collaborate"
+              bg-color="bg-[#D6EDD9]"
+              border-color="border-[#5ABE89]"
+              text-color="#1F7A57"
+            ></wc-tab-section>
           </div>
         </div>
       </section>

@@ -4,58 +4,28 @@ import {
   NavlinkResourcesContent,
   NavlinkCompanyContent,
 } from "./components/header-link-content.js";
+import {
+  TestimonialRatings,
+  GridSection,
+  MerfFeatures,
+} from "./components/testimonial-and-grid-contents.js";
+import { TestimonialMarquee } from "./components/testimonial-marquee.js";
+import { ProductUpdates } from "./components/product-updates-list.js";
+import { TabSection } from "./components/tab-section.js";
 
 customElements.define("wc-navlink-content", NavlinkContent);
 customElements.define("wc-navlink-link", NavlinkLink);
 customElements.define("wc-navlink-resources-content", NavlinkResourcesContent);
 customElements.define("wc-navlink-company-content", NavlinkCompanyContent);
 
-const searchIcon = document.querySelector("#search-icon");
-const searchContent = document.querySelector("#search-content");
-const sidebarMenu = document.querySelector("#sidebar-menu");
-const sidebarIcon = document.querySelector("#sidebar-menu > img");
-const sidebarContent = document.querySelector("#sidebar-content");
+customElements.define("wc-testimonial-child", TestimonialMarquee);
+customElements.define("wc-testimonial-ratings", TestimonialRatings);
+customElements.define("wc-grid-child", GridSection);
+customElements.define("wc-merf-features", MerfFeatures);
 
-searchIcon.addEventListener("click", (e) => {
-  e.stopPropagation();
-  searchContent.classList.toggle("hidden");
-});
+customElements.define("wc-product-update-list", ProductUpdates);
 
-document.addEventListener("click", (e) => {
-  if (!searchContent.classList.contains("hidden")) {
-    if (!searchContent.contains(e.target) && e.target !== searchIcon) {
-      searchContent.classList.add("hidden");
-    }
-  }
-});
-
-sidebarMenu.addEventListener("click", () => {
-  sidebarContent.classList.toggle("hidden");
-
-  if (!sidebarContent.classList.contains("hidden")) {
-    sidebarIcon.setAttribute("src", "assets/sidebar-icons/x-mark.svg");
-    document.body.style = "overflow: hidden";
-  } else {
-    sidebarIcon.setAttribute("src", "assets/sidebar-icons/bars.svg");
-    document.body.style = "overflow: auto";
-  }
-});
-
-// ?? Opens only one accordion
-
-document
-  .querySelectorAll("aside#sidebar-content details")
-  .forEach((details) => {
-    details.addEventListener("toggle", function () {
-      if (details.open) {
-        document
-          .querySelectorAll("aside#sidebar-content details")
-          .forEach((other) => {
-            if (other !== details) other.open = false;
-          });
-      }
-    });
-  });
+customElements.define("wc-tab-section", TabSection);
 
 const companyLogoCopy = document.querySelectorAll("#slider-wrapper img");
 
